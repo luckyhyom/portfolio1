@@ -88,6 +88,11 @@ workButton.addEventListener("click", () => {
 
   const target =
     event.target.nodeName === "BUTTON" ? event.target : event.target.parentNode;
+
+  if (event.target.nodeName !== "BUTTON") {
+    return;
+  }
+
   document
     .querySelector(".category__btn.selected")
     .classList.remove("selected");
