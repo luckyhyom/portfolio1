@@ -411,9 +411,23 @@ onclick을 추가하고, 거기에 경로를 추가해주면 되는거지
 }
 
 .project__decription h3 {
-  color: var(--color-white);
+  color: var(--color-dark-pink);
 }
 
+.project__decription h3::after {
+  display: block;
+  content: "";
+  width: 25px;
+  height: 1px;
+  left: 50%;
+  margin-top: 5px;
+  transform: translateX(-50%);
+  background-color: var(--color-white);
+  position: relative;
+}
+
+.project__decription span {
+}
 /* Testimonials */
 
 #testimonials {
