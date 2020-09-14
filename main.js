@@ -97,6 +97,8 @@ workButton.addEventListener("click", () => {
     .querySelector(".category__btn.selected")
     .classList.remove("selected");
   target.classList.add("selected");
+  //하나만 껏다 키는게 아니고, 하나는 키고 나머지는 꺼야하기때문에 toggle을 못쓴다,
+  //toggle을 쓰면 수동적이지만, 선택한것을 모아서 볼 수가 있음 front-end,back-end 두개 선택해서 볼수있음
 
   projectContainer.classList.add("anim-out");
 
@@ -153,4 +155,8 @@ const toggleBtn = document.querySelector(".navbar__toggle");
 toggleBtn.addEventListener("click", () => {
   const menu = document.querySelector(".navbar__menu");
   menu.classList.toggle("open");
+});
+
+document.querySelectorAll(".project__decription").forEach(function (a) {
+  a.style.background = "yellow";
 });
